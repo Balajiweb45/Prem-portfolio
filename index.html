@@ -67,7 +67,23 @@
   <!--
     - #MAIN
   -->
+<!-- Popup model -->
 
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
+
+  <div class="popup-overlay" id="popup">
+    <div class="popup-content">
+      <button class="close-btn" id="closePopup">&times;</button>
+      <img src="./assets-2/indisynthfull.png" alt="IndiSynth Logo" class="logo">
+      <!-- <h1>IndiSynth</h1> -->
+      <p style="text-align: justify;">A Python package that I've developed for generating synthetic data tailored to Indian entities has crossed over</p>
+      <h2>1,000 Downloads 🎉</h2>
+      <p class="achievement-message">Thank you for making this possible ✌🏻</p>
+      <a href="https://pypi.org/project/IndiSynth/" class="cta-button">Learn More</a>
+    </div>
+  </div>
+  
   <main>
 
     <!--
@@ -277,9 +293,6 @@
             <strong>Ps: </strong>I'm currently building <strong>CleanMyData</strong>, a web-based SaaS tool that <strong>streamlines data cleaning</strong> with automated preprocessing, formatting, and AI-driven insights for faster, high-quality analysis.
           </p>
           
-
-          
-
           <!-- <p style="text-align-justify;">
             I bring a personal touch to each project, ensuring my work reflects a professional, clean, and minimalistic style.
           </p> -->
@@ -289,10 +302,22 @@
           </P> -->
         </section>
 
+        
+        
+
 
         <!--
           - service
         -->
+
+        <!-- Add this just before the "What I'm doing" section -->
+<section class="about-text">
+  <!-- Existing paragraphs... -->
+
+  
+
+  <!-- Rest of the "What I'm doing" section... -->
+</section>
 
         <section class="service">
 
@@ -369,14 +394,29 @@
 
         </section>
 
+        <div class="logo-marquee-container">
+          <div class="logo-marquee">
+            <div class="logo-marquee-content">
+              <img src="./assets-2/python.png" alt="Logo 1">
+              <img src="./assets-2/excel.png" alt="Logo 2">
+              <img src="./assets-2/mysql.png" alt="Logo 3">
+              <img src="./assets-2/fabric.webp" alt="Logo 4">
+              <img src="./assets-2/aws.png" alt="Logo 5">
+              <img src="./assets-2/portfolio.png" alt="Logo 6">
+              <img src="./assets-2/firebase.png" alt="Logo 7">
+              <img src="./assets-2/indisynth2.png" alt="Logo 8">
+            </div>
+          </div>
+        </div>
 
-        <!--
-          - testimonials
-        -->
-<!-- 
-        <section class="testimonials">
+    
 
-          <h3 class="h3 testimonials-title">Testimonials</h3>
+
+
+ 
+        <!-- <section class="testimonials">
+
+          <h3 class="h3 testimonials-title">Here’s What People in Tech Think of Me</h3>
 
           <ul class="testimonials-list has-scrollbar">
 
@@ -473,11 +513,7 @@
         </section> -->
 
 
-        <!--
-          - testimonials modal
-        -->
-
-        <div class="modal-container" data-modal-container>
+         <div class="modal-container" data-modal-container>
 
           <div class="overlay" data-overlay></div>
 
@@ -511,12 +547,112 @@
                 </p>
               </div>
 
-            </div>
+            </div> 
 
-          </section>
-
+          </section> 
         </div>
 
+        <h3 class="h3 testimonials-title">Network & Chill</h3>
+
+        <section class="blog-posts">
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7274976274282946561/?originTrackingId=eUd7YVajQjqiwVkG0%2FE%2F1Q%3D%3D">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets-2/cii.png" alt="SQL Cheatsheet" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    
+
+                    <time datetime="2022-02-23">Dec 17, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">CII Connect 2024</h3>
+
+                </div>
+
+              </a>
+            </li>
+            
+
+            <li class="blog-post-item">
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7273753775931035648/?originTrackingId=fCXX4BP8QGyxQWTiN0qmIw%3D%3D">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets-2/thiran.png" alt="SQL Cheatsheet" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    
+
+                    <time datetime="2022-02-23">Dec 14, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">The World of LLMs</h3>
+
+                 
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://www.linkedin.com/feed/update/urn:li:activity:7264268382374359041/?originTrackingId=lKdaauh7S6i4O%2FA5Fr3Kpw%3D%3D">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets-2/techx.png" alt="SQL Cheatsheet" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    
+
+                    <time datetime="2022-02-23">Nov 15, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">TechX Conference</h3>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href=https://www.linkedin.com/posts/srinrealyf_networking-dataanalytics-codebasics-activity-7223183506036641792-2MMM?utm_source=social_share_send&utm_medium=member_desktop_web>
+
+                <figure class="blog-banner-box">
+                  <img src="./assets-2/codebasics.png" alt="SQL Cheatsheet" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    
+
+                    <time datetime="2022-02-23">July 27, 2024</time>
+                  </div>
+
+                  <h3 class="h3 blog-item-title">Codebasics Meetup</h3>
+
+                </div>
+
+              </a>
+            </li>
+            
+          </ul>
+
+        </section>
+
+        
 
         <!--
           - clients
@@ -1390,63 +1526,6 @@
 
               </a>
             </li>
-
-            
-            <!-- <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li> -->
 
           </ul>
 

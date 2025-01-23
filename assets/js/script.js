@@ -159,7 +159,7 @@ for (let i = 0; i < navigationLinks.length; i++) {
 }
 
 const typewriterElement = document.getElementById('typewriter');
-const titles = ["Data Analyst", "Business Scientist"];
+const titles = ["Data Analyst","Business Scientist"];
 let titleIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
@@ -199,3 +199,62 @@ document.addEventListener('DOMContentLoaded', type);
 
 
 document.addEventListener('DOMContentLoaded', type);
+
+// Add this to your existing JavaScript file
+document.addEventListener("DOMContentLoaded", () => {
+  const marquee = document.querySelector(".logo-marquee")
+  const marqueeContent = document.querySelector(".logo-marquee-content")
+
+  // Clone the content if it's not already cloned
+  if (marquee.children.length === 1) {
+    marquee.appendChild(marqueeContent.cloneNode(true))
+  }
+
+  // Reset animation when it ends
+  marquee.addEventListener("animationiteration", () => {
+    marquee.style.animation = "none"
+    marquee.offsetHeight // Trigger reflow
+    marquee.style.animation = null
+  })
+})
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const popup = document.getElementById("popup");
+  const mainContent = document.getElementById("main-content");
+  const closeBtn = document.getElementById("closePopup");
+  let confettiInterval;
+
+  function startConfetti() {
+    confettiInterval = setInterval(() => {
+      confetti({
+        particleCount: 100,
+        startVelocity: 30,
+        spread: 360,
+        origin: { x: Math.random(), y: Math.random() - 0.2 },
+        disableForReducedMotion: true
+      });
+    }, 500);
+  }
+
+  function stopConfetti() {
+    // Clear the interval first
+    clearInterval(confettiInterval);
+    
+    // Force stop all confetti animations
+    confetti.reset();
+    
+    // Additional cleanup - remove any remaining canvas elements
+    const canvases = document.querySelectorAll('.confetti-canvas');
+    canvases.forEach(canvas => canvas.remove());
+  }
+
+  popup.style.display = "flex";
+  startConfetti();
+
+  closeBtn.addEventListener("click", () => {
+    stopConfetti();
+    popup.style.display = "none";
+    mainContent.style.display = "block";
+  });
+});

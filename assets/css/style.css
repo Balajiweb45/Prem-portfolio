@@ -1915,3 +1915,166 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+
+.logo-marquee-container {
+  overflow: hidden; /* Ensure no content overflows the container */
+  width: 100%;
+  height: 90px; /* Matches the marquee container height */
+  margin: 20px 0;
+
+  border-radius: 10px; /* Smaller rounded corners */
+  display: flex; /* Ensures the content is centered */
+  align-items: center; /* Vertically centers the content */
+  justify-content: center; /* Horizontally centers the content */
+ 
+}
+
+.logo-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 20s linear infinite;
+}
+
+.logo-marquee-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  min-width: 145%;
+  gap: 5px;
+}
+
+/* Adjust spacing for larger screens */
+@media (min-width: 768px) {
+  .logo-marquee-content {
+    min-width: 80%; /* Reduce the width for desktop */
+    gap: 20px; /* Increase gap for a better look on larger screens */
+  }
+}
+
+.logo-marquee img {
+  height: 50px;
+  width: 100px;
+  object-fit: contain;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause animation when hovering */
+.logo-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 268px) {
+  .logo-marquee {
+    animation: marquee 90s linear infinite;
+  }
+
+  .logo-marquee img {
+    height: 40px;
+  }
+}
+
+/* Popup Styles */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  padding: 20px; /* Space on the sides */
+  box-sizing: border-box;
+}
+
+.popup-content {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 30px 20px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto; /* Center the content horizontally */
+  position: relative;
+}
+
+.popup-content .logo {
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+.popup-content h1 {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 10px 0;
+}
+
+.popup-content h2 {
+  font-size: 1.5rem;
+  color: #27ae60;
+  margin: 10px 0;
+}
+
+.popup-content p {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}
+
+.achievement-message {
+  font-style: bold;
+  color: #888;
+}
+
+.cta-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #3498db;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #2980b9;
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+/* Main Content Hidden by Default */
+#main-content {
+  padding: 20px;
+  text-align: center;
+  display: none; /* Hidden until popup is closed */
+}
+
